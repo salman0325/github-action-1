@@ -1,1 +1,16 @@
+name: shell command
 
+on:
+  push:
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest  # Specifies the runner environment
+    steps:
+      - name: Print Welcome Message
+        run: echo "Welcome to DevOps"
+      
+      - name: Run Node.js and npm versions
+        run: |
+          node -v
+          npm -v
